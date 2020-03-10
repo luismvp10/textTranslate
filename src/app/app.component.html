@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row mt-5">
+
+    <div class="col-6">
+      <select class="custom-select" id="inputGroupSelect01" #langSelect (change)="changeLang(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="row mt-5">
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Word</th>
+        <th scope="col">Translate</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Add Employee </td>
+        <td>{{ 'Addemployee' | translate }}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Name</td>
+        <td>{{ 'Name'  | translate }}</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Email</td>
+        <td>{{ 'Email' | translate}}</td>
+      </tr>
+
+
+      <tr>
+        <th scope="row">4</th>
+        <td>Phone Number</td>
+        <td>{{ 'PhoneNo'  | translate }}</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Submit</td>
+        <td>{{ 'Submit'  | translate }}</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Cancel</td>
+        <td>{{ 'Cancel'  | translate }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">7</th>
+        <td>Home</td>
+        <td>{{ 'Home'  | translate }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">8</th>
+        <td>Employee</td>
+        <td>{{ 'Employee'  | translate }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">9</th>
+        <td>Employee List</td>
+        <td>{{ 'EmployeeList'  | translate }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<router-outlet></router-outlet>
